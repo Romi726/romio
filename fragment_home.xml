@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_home_log"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="16dp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_like_empty"
+                app:layout_constraintTop_toTopOf="@id/iv_home_dm"
+                app:layout_constraintEnd_toStartOf="@id/iv_home_dm"
+                android:layout_marginEnd="21dp"/>
+
+
+            <ImageView
+                android:id="@+id/iv_home_dm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_share"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="14dp"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/siv_home_my_story"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:src="@drawable/img_sample"
+                app:layout_constraintTop_toBottomOf="@id/iv_home_log"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="13dp"
+                android:layout_marginStart="11dp"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full"/>
+
+            <FrameLayout
+                android:id="@+id/fl_home_my_story"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/siv_home_my_story"
+                app:layout_constraintStart_toStartOf="@id/siv_home_my_story"
+                app:layout_constraintBottom_toBottomOf="@id/siv_home_my_story"
+                app:layout_constraintEnd_toEndOf="@id/siv_home_my_story">
+
+                <ImageView
+                    android:id="@+id/iv_home_my_story_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_story_gray"/>
+                <ImageView
+                    android:id="@+id/iv_home_my_story_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_story_color"
+                    android:visibility="gone"/>
+
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/iv_home_my_story_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_story_plus"
+                app:layout_constraintBottom_toBottomOf="@id/siv_home_my_story"
+                app:layout_constraintEnd_toEndOf="@id/siv_home_my_story">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/tv_home_my_story"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="내 스토리"
+                app:layout_constraintTop_toBottomOf="@id/siv_home_my_story"
+                app:layout_constraintStart_toStartOf="@id/siv_home_my_story"
+                app:layout_constraintEnd_toEndOf="@id/siv_home_my_story"
+                android:layout_marginTop="9dp">
+
+            </TextView>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/siv_home_story_1"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:src="@drawable/img_sample2"
+                app:layout_constraintTop_toTopOf="@id/siv_home_my_story"
+                app:layout_constraintBottom_toBottomOf="@id/siv_home_my_story"
+                app:layout_constraintStart_toEndOf="@id/siv_home_my_story"
+                android:layout_marginStart="22dp"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full">
+
+            <FrameLayout
+                android:id="@+id/fl_home_story_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/siv_home_story_1"
+                app:layout_constraintStart_toStartOf="@id/siv_home_story_1"
+                app:layout_constraintBottom_toBottomOf="@id/siv_home_story_1"
+                app:layout_constraintEnd_toEndOf="@id/siv_home_story_1">
+
+                <ImageView
+                    android:id="@+id/iv_home_story_color_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_story_color" />
+
+                <ImageView
+                    android:id="@+id/iv_home_story_gray_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_story_gray"
+                    android:visibility="gone"/>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_home_story_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:text="kurom.official"
+                app:layout_constraintTop_toBottomOf="@id/siv_home_story_1"
+                app:layout_constraintStart_toStartOf="@id/siv_home_story_1"
+                app:layout_constraintEnd_toEndOf="@id/siv_home_story_1"
+                android:layout_marginTop="9dp"/>
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/siv_home_story_2"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:src="@drawable/img_sample2"
+                app:layout_constraintTop_toTopOf="@id/siv_home_story_1"
+                app:layout_constraintBottom_toBottomOf="@id/siv_home_story_1"
+                app:layout_constraintStart_toEndOf="@id/siv_home_story_1"
+                android:layout_marginStart="22dp"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full">
+
+            <FrameLayout
+                android:id="@+id/fl_home_story_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/siv_home_story_2"
+                app:layout_constraintStart_toStartOf="@id/siv_home_story_2"
+                app:layout_constraintBottom_toBottomOf="@id/siv_home_story_2"
+                app:layout_constraintEnd_toEndOf="@id/siv_home_story_2">
+
+                <ImageView
+                    android:id="@+id/iv_home_story_color_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_story_color"/>
+
+                <ImageView
+                    android:id="@+id/iv_home_story_gray_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_story_gray"
+                    android:visibility="gone"/>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_home_story_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:text="kurom.official"
+                app:layout_constraintTop_toBottomOf="@id/siv_home_story_2"
+                app:layout_constraintStart_toStartOf="@id/siv_home_story_2"
+                app:layout_constraintEnd_toEndOf="@id/siv_home_story_2"
+                android:layout_marginTop="9dp"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/siv_home_story_3"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:src="@drawable/img_sample2"
+                app:layout_constraintTop_toTopOf="@id/siv_home_story_2"
+                app:layout_constraintBottom_toBottomOf="@id/siv_home_story_2"
+                app:layout_constraintStart_toEndOf="@id/siv_home_story_2"
+                android:layout_marginStart="22dp"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full">
+
+            <FrameLayout
+                android:id="@+id/fl_home_story_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/siv_home_story_3"
+                app:layout_constraintStart_toStartOf="@id/siv_home_story_3"
+                app:layout_constraintBottom_toBottomOf="@id/siv_home_story_3"
+                app:layout_constraintEnd_toEndOf="@id/siv_home_story_3">
+
+                <ImageView
+                    android:id="@+id/iv_home_story_color_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_story_color"/>
+
+                <ImageView
+                    android:id="@+id/iv_home_story_gray_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_story_gray"
+                    android:visibility="gone"/>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_home_story_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:text="kurom.official"
+                app:layout_constraintTop_toBottomOf="@id/siv_home_story_3"
+                app:layout_constraintStart_toStartOf="@id/siv_home_story_3"
+                app:layout_constraintEnd_toEndOf="@id/siv_home_story_3"
+                android:layout_marginTop="9dp"/>
+
+            <View
+                android:id="@+id/iv_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DBDBDB"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_my_story"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/siv_home_story_4"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/img_sample2"
+                app:layout_constraintTop_toTopOf="@id/iv_line"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="10dp"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full">
+
+            <FrameLayout
+                android:id="@+id/fl_home_story_4"
+                android:layout_width=""
+                android:layout_height=""
+                app:layout_constraintTop_toTopOf="@id/siv_home_story_4"
+                app:layout_constraintStart_toStartOf="@id/siv_home_story_4"
+                app:layout_constraintBottom_toBottomOf="@id/siv_home_story_4"
+                app:layout_constraintEnd_toEndOf="@id/siv_home_story_4">
+
+                <ImageView
+                    android:id="@+id/iv_home_story_color_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_story_color" />
+
+                <ImageView
+                    android:id="@+id/iv_home_story_gray_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_story_gray"
+                    android:visibility="gone"/>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_home_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="kurom.official"
+                app:layout_constraintStart_toEndOf="@id/siv_home_story_4"
+                app:layout_constraintTop_toTopOf="@id/siv_home_story_4"
+                app:layout_constraintBottom_toBottomOf="@id/siv_home_story_4"
+                android:layout_marginStart="9dp">
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/iv_options"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_options"
+                app:layout_constraintTop_toTopOf="@id/iv_line"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="14dp"/>
+
+            <ImageView
+                android:id="@+id/iv_options"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@id"
+                app:layout_constraintTop_toTopOf="@id/iv_line"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="14dp"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
